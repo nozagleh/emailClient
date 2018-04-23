@@ -1,0 +1,53 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".ReadMail">
+
+    <include layout="@layout/general_app_bar"/>
+
+    <include android:id="@+id/header_bar" layout="@layout/mail_header" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_default="spread"
+        app:layout_constraintTop_toBottomOf="@id/header_bar">
+
+        <TextView
+            android:id="@+id/subj_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="A meeting tomorrow"/>
+
+        <TextView
+            android:id="@+id/bodyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            android:textColor="@android:color/black"
+            android:lineSpacingExtra="4sp"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/subj_text" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
